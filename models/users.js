@@ -27,7 +27,14 @@ const UsersSchema = new Schema({
   password: {
     type: String,
     required: true
+  },
+
+  is_Instructor: {
+    type: Boolean,
+    required: false
   }
+  
+
 });
 
 module.exports = User = mongoose.model('users', UsersSchema);
