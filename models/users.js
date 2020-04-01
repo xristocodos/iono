@@ -31,10 +31,16 @@ const UsersSchema = new Schema({
 
   is_Instructor: {
     type: Boolean,
-    required: false
-  }
+    required: false,
+    default: false
+  },
+
+  bookings: [{
+    type: mongoose.Schema.Types.ObjectId,
+    ref: "Bookings"
+  }]
   
 
 });
 
-module.exports = User = mongoose.model('users', UsersSchema);
+module.exports = User = mongoose.model('Users', UsersSchema);
