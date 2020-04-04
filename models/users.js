@@ -4,19 +4,14 @@ const Schema = mongoose.Schema;
 
 
 const UsersSchema = new Schema({
-  username: {
+  userName: {
     type: String,
     required: true
   },
-  // fiirst name can be optional when creating account
-  firstName: {
+  
+  name:{
     type: String,
-    required: false
-  },
-  // last name can be optional when creating account
-  lastName: {
-    type: String,
-    required: false
+    required: true
   },
 
   email: {
